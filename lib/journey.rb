@@ -1,11 +1,14 @@
 class Journey
 
+  attr_reader :start_station
+
+  def initialize(station)
+    @start_station = station
+    @complete = false
+  end
+
   MINIMUM_FARE = 1
   PENALTY = 6
-
-  def start(station)
-    @start_station = station
-  end
 
   def finish(station)
     @end_station = station
